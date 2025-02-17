@@ -33,14 +33,14 @@ pages/
     [id].jsx          -> /blog/:id
   author/
     [author_name]/
-      name.jsx     -> /author/:author_name/name
+      name.jsx        -> /author/:author_name/name
 ```
 
 ### features :
 
 1. automatically converts files to routes
 2. supports dynamic parameters with `[param].jsx`
-3. supports nested routes based on your file and directory structure, mirroring your folder organization in your route paths, `[param]/example.jsx`
+3. supports nested routes based on your file and directory structure, `[param]/example.jsx`
 4. handles index routes with `index.jsx`
 
 ### for your page components :
