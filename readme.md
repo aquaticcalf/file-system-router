@@ -49,16 +49,15 @@ pages/
 import { useParams } from 'react-router-dom'
 
 export default function BlogPost() {
-  const { id } = useParams()
-  return <div>blog post : {id}</div>
+    const { id } = useParams()
+    return <div>blog post : {id}</div>
 }
 
 // pages/projects/[...slug].jsx
 import { useParams } from 'react-router-dom'
 
 export default function Projects() {
-  const { slug } = useParams()
-  const parts = slug?.split('/') || []
-  return <div>project parts : {parts.join(', ')}</div>
+    const { slug } = useParams()
+    return <div>project name : {slug}</div>
 }
 ```
