@@ -13,10 +13,6 @@ function convert_file_path_to_route_path(key) {
 
     const route_segments = segments.map(segment => {
         if (segment === 'index') return ''
-        if (segment.startsWith('[...') && segment.endsWith(']')) {
-            const param_name = segment.slice(4, -1)
-            return `*${param_name}`
-        }
         if (segment.startsWith('[') && segment.endsWith(']')) {
             return `:${segment.slice(1, -1)}`
         }

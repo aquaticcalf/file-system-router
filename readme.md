@@ -31,15 +31,16 @@ pages/
   blog/
     index.jsx         -> /blog
     [id].jsx          -> /blog/:id
-  projects/
-    [...slug].jsx     -> /projects/*
+  author/
+    [author_name]/
+      name.jsx     -> /author/:author_name/name
 ```
 
 ### features :
 
 1. automatically converts files to routes
 2. supports dynamic parameters with `[param].jsx`
-3. supports catch all routes with `[...slug].jsx`
+3. supports nested routes based on your file and directory structure, mirroring your folder organization in your route paths, `[param]/example.jsx`
 4. handles index routes with `index.jsx`
 
 ### for your page components :
@@ -53,11 +54,11 @@ export default function BlogPost() {
     return <div>blog post : {id}</div>
 }
 
-// pages/projects/[...slug].jsx
+// pages/author/[author_name]/name.jsx
 import { useParams } from 'react-router-dom'
 
-export default function Projects() {
-    const { slug } = useParams()
-    return <div>project name : {slug}</div>
+export default function AuthorName() {
+    const { author_name } = useParams()
+    return <div>author name : {author_name}</div>
 }
 ```
