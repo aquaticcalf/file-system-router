@@ -1,6 +1,6 @@
 {
   "name": "file-system-router",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a file based routing system for react router",
   "keywords": [
     "file",

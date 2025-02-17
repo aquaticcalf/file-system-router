@@ -1,6 +1,12 @@
 ## file system router
 
-### usage in your app:
+### installation :
+
+```bash
+npm install file-system-router
+```
+
+### usage in your app :
 
 ```jsx
 // App.jsx
