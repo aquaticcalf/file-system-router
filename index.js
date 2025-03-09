@@ -30,18 +30,19 @@ function convert_file_path_to_route_path(key) {
 
 export function generateRoutes(pages) {
     const routes = Object.entries(pages).map(([key, module]) => {
-        if (key === "pages/404.jsx") {
+        if (key === "pages/404.jsx" || "pages/404.tsx") {
             FourOFour = module.default
-            continue
         }
-        const route_path = convert_file_path_to_route_path(key)
-        const Component = module.default
-        return <Route key={route_path} path={route_path} element={<Component />} />
+        else {
+            const route_path = convert_file_path_to_route_path(key)
+            const Component = module.default
+            return <Route key={route_path} path={route_path} element={<Component />} />
+        }
     })
 
     routes.push(<Route key="404" path="*" element={<FourOFour />} />)
 
-    return routes;
+    return routes
 }
 
 export function FileSystemRouter({ pages }) {
