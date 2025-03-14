@@ -1,6 +1,6 @@
 {
   "name": "file-system-router",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "a file based routing system for react router",
   "keywords": [
     "file",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "author": "aquaticcalf",
   "type": "module",
-  "main": "index.js",
+  "main": "index.jsx",
   "dependencies": {
     "react": "^19.0.0",
     "react-router-dom": "^7.1.5"

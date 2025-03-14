@@ -31,7 +31,7 @@ function convert_file_path_to_route_path(key) {
 export function generateRoutes(pages) {
     let FourOFour = () => <div>404</div>
     const routes = Object.entries(pages).map(([key, module]) => {
-        if (key.endsWith('404.jsx') || key.endsWith('404.tsx')) {
+        if (key === "pages/404.jsx" || key === "pages/404.tsx" ) {
             FourOFour = module.default
             return null
         }
